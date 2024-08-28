@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<nnnuf:MSstation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nnnuf="http://nnnuf.net/xsd/0.9" xsi:schemaLocation="http://nnnuf.net/xsd/0.9 ../../InfoModelNetbeheer.xsd ">
+  <Handle>417D</Handle>
+  <GisId>54321</GisId>
+  <Status>BESTAAND</Status>
+  <AssetId>{86AB49FB-3CFC-470F-9A2E-AFC73C96E033}</AssetId>
+  <Naam>MS-12345 Teststation</Naam>
+  <Nummer>12345</Nummer>
+  <Adres>
+    <Postcode>1234 AB</Postcode>
+    <Straatnaam>Straatnaam</Straatnaam>
+    <Huisnummer>100</Huisnummer>
+    <HuisnummerToevoeging>tv</HuisnummerToevoeging>
+    <Plaatsnaam>Plaatsnaam</Plaatsnaam>
+  </Adres>
+  <DatumAanleg>2023-10-10</DatumAanleg>
+  <Eigenaar>Netbeheerder</Eigenaar>
+  <Beheerder>Netbeheerder</Beheerder>
+  <Functie>NETSTATION</Functie>
+</nnnuf:MSstation>
