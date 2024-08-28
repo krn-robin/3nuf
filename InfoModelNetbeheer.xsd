@@ -3,7 +3,7 @@
   <xs:import schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" namespace="http://www.opengis.net/gml/3.2"/>
   <xs:element name="LSkabel">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
@@ -31,41 +31,13 @@
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="Spanningsniveau" type="nnnuf:SpanningsniveauLSKabel" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="MSkabel">
-    <xs:complexType>
-				<xs:sequence>
-        <xs:element name="Handle" type="xs:string" minOccurs="1"/>
-        <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
-        <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
-        <xs:element name="DatumFabricage" type="xs:date" minOccurs="0"/>
-        <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
-        <xs:element name="FaseAanduiding" type="nnnuf:Faseaanduiding" minOccurs="0"/>
-        <xs:element name="Zegeltekst" type="xs:string" minOccurs="0"/>
-        <xs:element name="Fabrikant" type="nnnuf:FabrikantKabel" minOccurs="0"/>
-        <xs:element name="Inmeetwijze" type="nnnuf:Inmeetwijze" minOccurs="0"/>
-        <xs:element name="Nauwkeurigheid" type="nnnuf:NauwkeurigheidXYvalue" minOccurs="0"/>
-        <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
-        <xs:element name="RedenNietVerwijdering" type="nnnuf:RedenNietVerwijdering" minOccurs="0"/>
-        <xs:element name="Uitvoering" type="nnnuf:UitvoeringMSKabel" minOccurs="0"/>
-        <xs:element name="KabelOpbouw" type="nnnuf:OpbouwMSKabel" minOccurs="0"/>
-        <xs:element name="OmschrijvingUitvoering" type="xs:string" minOccurs="0"/>
-        <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
-        <xs:element name="GisId" type="xs:string" minOccurs="0"/>
-        <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0"/>
-        <xs:element name="AssetId" type="xs:string" minOccurs="0"/>
-        <xs:element name="Subnettype" type="nnnuf:Subnettype" minOccurs="0"/>
-        <xs:element name="Spanningsniveau" type="nnnuf:SpanningsniveauMSKabel" minOccurs="0"/>
-        <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
-        <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="MSkabel" type="MSkabelType"/>
   <xs:element name="OVLoverdrachtspunt">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Mastnummer" type="xs:string" minOccurs="0"/>
         <xs:element name="Functie" type="nnnuf:FunctieOvlOverdrachtspunt" minOccurs="0"/>
@@ -87,12 +59,12 @@
         <xs:element name="Schakeling" type="nnnuf:SchakelingOvl" minOccurs="0"/>
         <xs:element name="Kabelmontage" type="nnnuf:Kabelmontage" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="LSoverdrachtspunt">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Doorlaatwaarde" type="nnnuf:Doorlaatwaarde" minOccurs="0"/>
         <xs:element name="Functie" type="nnnuf:FunctieLSoverdrachtspunt" minOccurs="0"/>
@@ -115,12 +87,12 @@
         <xs:element name="EigenRichting" type="nnnuf:JaNee" minOccurs="0"/>
         <xs:element name="Kabelmontage" type="nnnuf:Kabelmontage" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="LSkast">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Hoek" type="xs:double" minOccurs="0"/>
         <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
@@ -142,14 +114,14 @@
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="MSstation" type="nnnuf:MSstationType">
   </xs:element>
   <xs:element name="MSoverdrachtspunt">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Identificatie" type="xs:string" minOccurs="0"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
@@ -163,12 +135,12 @@
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="MSmof">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Functie" type="nnnuf:FunctieMSmof" minOccurs="0"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
@@ -186,12 +158,12 @@
         <xs:element name="CrossBondingAanwezig" type="nnnuf:JaNee" minOccurs="0"/>
         <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Eaardmof">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Netvlak" type="nnnuf:NetvlakElektra" minOccurs="0"/>
@@ -204,12 +176,12 @@
         <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Eaarddraad">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Inmeetwijze" type="nnnuf:Inmeetwijze" minOccurs="0"/>
@@ -227,12 +199,12 @@
         <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Eaardpen">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
@@ -248,12 +220,12 @@
         <xs:element name="Materiaal" type="nnnuf:MateriaalAardpen" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Amantelbuis">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="BovengrondsGemarkeerd" type="nnnuf:JaNee" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
@@ -272,12 +244,12 @@
         <xs:element name="Thema" type="nnnuf:Thema" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AmantelbuisInhoud">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="AssetId" type="xs:string" minOccurs="0"/>
         <xs:element name="MantelbuisAssetId" type="xs:string" minOccurs="0"/>
@@ -286,12 +258,12 @@
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="MantelbuisLabel" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AbeschermingVlak">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
@@ -305,23 +277,23 @@
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Aopmerking">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="Thema" type="nnnuf:Thema" minOccurs="0"/>
         <xs:element name="Omschrijving" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AbestandBijlage">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="Bestandsnaam" type="xs:string" minOccurs="0"/>
@@ -330,23 +302,23 @@
         <xs:element name="Kijkhoek" type="xs:double" minOccurs="0"/>
         <xs:element name="TypeBestand" type="nnnuf:BestandMediaTypeValue" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Amaaiveldhoogte">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
         <xs:element name="Thema" type="nnnuf:Thema" minOccurs="0"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Akunstwerk">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
@@ -362,12 +334,12 @@
         <xs:element name="Kunstwerknummer" type="xs:string" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Aaanlegtechniek">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
@@ -381,12 +353,12 @@
         <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AinUittredepunt">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="InUit" type="nnnuf:InUit" minOccurs="0"/>
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
@@ -395,12 +367,12 @@
         <xs:element name="Hoek" type="xs:double" minOccurs="0"/>
         <xs:element name="Kunstwerknummer" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gstation">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
@@ -422,12 +394,12 @@
         <xs:element name="Bewerking" type="nnnuf:BewerkingGas" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gleiding">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
@@ -457,12 +429,12 @@
         <xs:element name="KBsectie" type="xs:string" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gafsluiter">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
@@ -491,12 +463,12 @@
         <xs:element name="Serienummer" type="xs:string" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GtStuk">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
@@ -512,12 +484,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Goverdrachtspunt">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
@@ -535,12 +507,12 @@
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gaftakzadel">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
         <xs:element name="Uitvoering" type="nnnuf:UitvoeringAftakzadel" minOccurs="0"/>
@@ -556,12 +528,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Geindstuk">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
@@ -577,12 +549,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GappendageOverig">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
@@ -599,12 +571,12 @@
         <xs:element name="Fabrikant" type="nnnuf:FabrikantGasAppendage" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gisolatiestuk">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="BekledingAchteraf" type="nnnuf:AppendagebekledingGas" minOccurs="0"/>
@@ -622,12 +594,12 @@
         <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Govergangsstuk">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="BekledingAchteraf" type="nnnuf:AppendagebekledingGas" minOccurs="0"/>
@@ -645,12 +617,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gmeetpunt">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
@@ -666,12 +638,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gsifon">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
@@ -687,12 +659,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GverticaleBocht">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Netvlak" type="nnnuf:NetvlakGas" minOccurs="0"/>
         <xs:element name="AssetId" type="xs:string" minOccurs="0"/>
@@ -707,12 +679,12 @@
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gontspanningselement">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="KoppelingAansluitleiding" type="nnnuf:KoppelingAansluitleidingOSE" minOccurs="0"/>
@@ -729,12 +701,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gblaasgatzadel">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Druk" type="nnnuf:Druk" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
@@ -749,12 +721,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Gleidingafblaas">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="SoortAfsluiter" type="nnnuf:SoortGasAfsluiterAfblaas" minOccurs="0"/>
@@ -773,12 +745,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Amarkeringsobject">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="AssetId" type="xs:string" minOccurs="0"/>
         <xs:element name="Bewerking" type="nnnuf:BewerkingGas" minOccurs="0"/>
@@ -793,12 +765,12 @@
         <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="KBgelijkrichter">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="AantalAnodes" type="xs:integer" minOccurs="0"/>
         <xs:element name="OvergangsweerstandAnodebed" type="xs:integer" minOccurs="0"/>
@@ -827,12 +799,12 @@
         <xs:element name="Thema" type="nnnuf:Thema" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="KBmeetpaal">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Meetpuntnummer" type="xs:string" minOccurs="0"/>
         <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
@@ -861,12 +833,12 @@
         <xs:element name="TypeMeetelectrode" type="nnnuf:TypeKBmeetelectrode" minOccurs="0"/>
         <xs:element name="Telemeting" type="nnnuf:JaNee" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="KBmeetdraad">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Kabelkleur" type="nnnuf:KabelkleurKBdraad" minOccurs="0"/>
         <xs:element name="Uitvoering" type="nnnuf:UitvoeringKBdraad" minOccurs="0"/>
@@ -892,12 +864,12 @@
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="Lengte" type="xs:integer" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="KBanode">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="SoortAnode" type="nnnuf:SoortKBanode" minOccurs="0"/>
         <xs:element name="AantalAnodes" type="xs:integer" minOccurs="0"/>
@@ -920,12 +892,12 @@
         <xs:element name="Thema" type="nnnuf:Thema" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="KBdrainage">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
         <xs:element name="Nummer" type="xs:string" minOccurs="0"/>
@@ -950,12 +922,12 @@
         <xs:element name="Thema" type="nnnuf:Thema" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="KBobject">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="SoortObject" type="nnnuf:SoortKBobject" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
@@ -973,12 +945,12 @@
         <xs:element name="Thema" type="nnnuf:Thema" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Tkabel">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="VerbindingNummer" type="xs:string" minOccurs="0"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
@@ -999,12 +971,12 @@
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Tmof">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="Functie" type="nnnuf:FunctieTelecomMof" minOccurs="0"/>
@@ -1020,12 +992,12 @@
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Toverdrachtspunt">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
@@ -1040,12 +1012,12 @@
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="BGTid" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Tstation">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="Naam" type="xs:string" minOccurs="0"/>
@@ -1065,12 +1037,12 @@
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="BAGadresId" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Tbuis">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Buisnummer" type="xs:string" minOccurs="0"/>
         <xs:element name="Uitvoering" type="nnnuf:UitvoeringTelecomBuis" minOccurs="0"/>
@@ -1092,12 +1064,12 @@
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="HSkabel">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Spanningsniveau" type="nnnuf:SpanningsniveauHSKabel" minOccurs="0"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
@@ -1121,12 +1093,12 @@
         <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="HSmof">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
         <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
@@ -1145,12 +1117,12 @@
         <xs:element name="NaamMonteur" type="xs:string" minOccurs="0"/>
         <xs:element name="CrossBondingAanwezig" type="nnnuf:JaNee" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="HSstation">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
@@ -1171,12 +1143,12 @@
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Eoliedrukleiding">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
@@ -1192,12 +1164,12 @@
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="OmschrijvingUitvoering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Eoliedrukinstallatie">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
@@ -1213,12 +1185,12 @@
         <xs:element name="Sectienummer" type="xs:string" minOccurs="0"/>
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="TbuisAppendage">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="GisId" type="xs:string" minOccurs="0"/>
         <xs:element name="Soort" type="nnnuf:SoortTelecomBuisAppendage" minOccurs="0"/>
@@ -1234,12 +1206,12 @@
         <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
         <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="LSmof">
     <xs:complexType>
-				<xs:sequence>
+      <xs:sequence>
         <xs:element name="Handle" type="xs:string" minOccurs="1"/>
         <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
         <xs:element name="Functie" type="nnnuf:FunctieLSmof" minOccurs="0"/>
@@ -1263,18 +1235,18 @@
         <xs:element name="NulGekoppeld" type="nnnuf:JaNee" minOccurs="0"/>
         <xs:element name="Bovengronds" type="nnnuf:JaNee" minOccurs="0"/>
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-				</xs:sequence>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
-	<xs:simpleType name="EigenaarBeheerder">
-		<xs:restriction base="xs:string">
+  <xs:simpleType name="EigenaarBeheerder">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Derden"/>
       <xs:enumeration value="Gemeente"/>
       <xs:enumeration value="Netbeheerder"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Status">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Status">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="BESTAAND"/>
       <xs:enumeration value="BESTAAND RESERVE"/>
       <xs:enumeration value="BESTAAND VERLATEN"/>
@@ -1285,25 +1257,25 @@
       <xs:enumeration value="REVISIE RESERVE"/>
       <xs:enumeration value="REVISIE VERLATEN"/>
       <xs:enumeration value="VERWIJDERD"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SubnettypeLS">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SubnettypeLS">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AANSLUITNET"/>
       <xs:enumeration value="DISTRIBUTIE"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Faseaanduiding">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Faseaanduiding">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="3 Fasen"/>
       <xs:enumeration value="L1"/>
       <xs:enumeration value="L2"/>
       <xs:enumeration value="L3"/>
       <xs:enumeration value="N"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FabrikantKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FabrikantKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Eldra"/>
       <xs:enumeration value="Energocomplekt"/>
       <xs:enumeration value="Hellenic"/>
@@ -1316,28 +1288,28 @@
       <xs:enumeration value="Tele-fonika"/>
       <xs:enumeration value="TKF"/>
       <xs:enumeration value="Waskonig en Walter (WenW)"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Inmeetwijze">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Inmeetwijze">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="GPS"/>
       <xs:enumeration value="Laser"/>
       <xs:enumeration value="Meetlint"/>
       <xs:enumeration value="Tachymeter"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="NauwkeurigheidXYvalue">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NauwkeurigheidXYvalue">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="onbekend"/>
       <xs:enumeration value="tot 100cm"/>
       <xs:enumeration value="tot 10cm"/>
       <xs:enumeration value="tot 30cm"/>
       <xs:enumeration value="tot 3cm"/>
       <xs:enumeration value="tot 50cm"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="RedenNietVerwijdering">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RedenNietVerwijdering">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Asfalt"/>
       <xs:enumeration value="Boom/bomen"/>
       <xs:enumeration value="Geen toestemming"/>
@@ -1351,16 +1323,16 @@
       <xs:enumeration value="Te verwijderen door derden"/>
       <xs:enumeration value="Vervuilde grond"/>
       <xs:enumeration value="Wegverharding"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Aardingsysteem">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Aardingsysteem">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="TN"/>
       <xs:enumeration value="TT"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringLSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringLSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="2x2.5Cu as2.5"/>
       <xs:enumeration value="3x10Cu as10"/>
       <xs:enumeration value="3x2.5Cu as2.5"/>
@@ -1376,48 +1348,48 @@
       <xs:enumeration value="5x10Cu"/>
       <xs:enumeration value="5x16Cu"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="OpbouwLSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OpbouwLSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="VG-YMvK-asmb"/>
       <xs:enumeration value="VO-YMvK-asmb"/>
       <xs:enumeration value="V-VMvKh-sas"/>
       <xs:enumeration value="V-VMvKsas"/>
       <xs:enumeration value="YMz1Kmbzh"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieLSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieLSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="LS"/>
       <xs:enumeration value="LSOV"/>
       <xs:enumeration value="OV"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Bewerking">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Bewerking">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="IG NEMEN"/>
       <xs:enumeration value="OPVULLEN"/>
       <xs:enumeration value="RS STELLEN"/>
       <xs:enumeration value="VERLATEN"/>
       <xs:enumeration value="VERPLAATSEN"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="JaNee">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JaNee">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Ja"/>
       <xs:enumeration value="Nee"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SpanningsniveauLSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SpanningsniveauLSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="230 V"/>
       <xs:enumeration value="400 V"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringMSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringMSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="1x240Alrm as25"/>
       <xs:enumeration value="1x400Cu 50as"/>
       <xs:enumeration value="1x630Alrm as35"/>
@@ -1431,87 +1403,87 @@
       <xs:enumeration value="3x240Alrm as50"/>
       <xs:enumeration value="3x95Alrm as50"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="OpbouwMSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OpbouwMSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="p1mekrvas lqwd"/>
       <xs:enumeration value="ymekrvas lqwd"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Subnettype">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Subnettype">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AANSLUITNET"/>
       <xs:enumeration value="DISTRIBUTIE "/>
       <xs:enumeration value="TRANSPORT"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SpanningsniveauMSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SpanningsniveauMSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="10 kV"/>
       <xs:enumeration value="20 kV"/>
       <xs:enumeration value="3 kV"/>
       <xs:enumeration value="6 kV"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieOvlOverdrachtspunt">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieOvlOverdrachtspunt">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="OV Aansluitkastje"/>
       <xs:enumeration value="OV mast"/>
       <xs:enumeration value="OV mast primair"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Doorlaatwaarde">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Doorlaatwaarde">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="16"/>
       <xs:enumeration value="25"/>
       <xs:enumeration value="35"/>
       <xs:enumeration value="4"/>
       <xs:enumeration value="6"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="AansluitsetOvl">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AansluitsetOvl">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AK OVL"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="LS-94 Faget"/>
       <xs:enumeration value="LS-94 Faget +City Zenz"/>
       <xs:enumeration value="LS-94 Faget +TF"/>
       <xs:enumeration value="LS-94 Faget +Timeswitch"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="AansluitwijzeOvl">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AansluitwijzeOvl">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aftak"/>
       <xs:enumeration value="Mini-ster"/>
       <xs:enumeration value="Rijgaansluiting"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="VoedingEnSturingOvl">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VoedingEnSturingOvl">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="LS gevoed met relais op OV-net"/>
       <xs:enumeration value="OV gevoed en geschakeld"/>
       <xs:enumeration value="OV gevoed met TF ontv in mast"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SchakelingOvl">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SchakelingOvl">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Avond"/>
       <xs:enumeration value="Avond en nacht"/>
       <xs:enumeration value="N.v.t."/>
       <xs:enumeration value="Nacht"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Kabelmontage">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Kabelmontage">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Geen stekker"/>
       <xs:enumeration value="Stekker handmatige montage"/>
       <xs:enumeration value="Stekker prefab af fabriek"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieLSoverdrachtspunt">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieLSoverdrachtspunt">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aansluiting via kast"/>
       <xs:enumeration value="Aansluitingbox"/>
       <xs:enumeration value="Abri"/>
@@ -1593,10 +1565,10 @@
       <xs:enumeration value="Woonboot"/>
       <xs:enumeration value="Woonwagen"/>
       <xs:enumeration value="Ziekenhuis"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringLSoverdrachtspunt">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringLSoverdrachtspunt">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AANSLK 63A V/FLAT HJ-5560"/>
       <xs:enumeration value="AANSLK 63A V/FLAT HJ-5560 OenK"/>
       <xs:enumeration value="AANSLK AK250 ≥3X80A T/M 160KVA"/>
@@ -1630,36 +1602,36 @@
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="OenK"/>
       <xs:enumeration value="Pfisterer"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieLSkast">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieLSkast">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Flatkast"/>
       <xs:enumeration value="Ov-voedingpunt"/>
       <xs:enumeration value="Verdeelkast"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieElectraStation">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieElectraStation">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="HOOFDSTATION LNB"/>
       <xs:enumeration value="KLANTSTATION"/>
       <xs:enumeration value="NETSTATION"/>
       <xs:enumeration value="OVERIG"/>
       <xs:enumeration value="VERDEELSTATION"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieMSmof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieMSmof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AFTAK"/>
       <xs:enumeration value="EIND"/>
       <xs:enumeration value="EIND GEAARD"/>
       <xs:enumeration value="OMKOKERING"/>
       <xs:enumeration value="VERBINDING"/>
       <xs:enumeration value="ZEGELWIJZIGING"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringMSMof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringMSMof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="10-20kV GPLK 3x35-70/XLPE 3x240 Cellpack"/>
       <xs:enumeration value="10-20kV GPLK 3x35-70/XLPE 3x240 Raychem"/>
       <xs:enumeration value="10-20kV GPLK 3x95-240/XLPE 3x240 Cellpack"/>
@@ -1704,58 +1676,58 @@
       <xs:enumeration value="REP 10kV GPLK 95-240 Cellpack"/>
       <xs:enumeration value="REP 10kV GPLK 95-240 SMOE 63923 Raychem"/>
       <xs:enumeration value="WIKKELMOF  Filoform"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="NetvlakElektra">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NetvlakElektra">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="HS"/>
       <xs:enumeration value="LHS"/>
       <xs:enumeration value="LS"/>
       <xs:enumeration value="MS"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="DoorsnedeAarddraad">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DoorsnedeAarddraad">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="25"/>
       <xs:enumeration value="35"/>
       <xs:enumeration value="50"/>
       <xs:enumeration value="6"/>
       <xs:enumeration value="70"/>
       <xs:enumeration value="95"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Geleidermateriaal">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Geleidermateriaal">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Cu"/>
       <xs:enumeration value="Cu Vertind"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="IsolatiemateriaalAarddraad">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IsolatiemateriaalAarddraad">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Blank"/>
       <xs:enumeration value="Geel/Groen VD"/>
       <xs:enumeration value="PE"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="DoorsnedeAardpen">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DoorsnedeAardpen">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="12.0 mm"/>
       <xs:enumeration value="12.5 mm"/>
       <xs:enumeration value="12.7 mm"/>
       <xs:enumeration value="16.0 mm"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="MateriaalAardpen">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MateriaalAardpen">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Koper"/>
       <xs:enumeration value="Koper vertint"/>
       <xs:enumeration value="Staal gegalvaniseerd"/>
       <xs:enumeration value="Staal verkoperd"/>
       <xs:enumeration value="Staal verzinkt"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="MateriaalMantelbuis">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MateriaalMantelbuis">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="GV EPOXY"/>
       <xs:enumeration value="HDPE DEELBAAR DN100 "/>
       <xs:enumeration value="HDPE DEELBAAR DN150 "/>
@@ -1770,10 +1742,10 @@
       <xs:enumeration value="PVC O SDR 41"/>
       <xs:enumeration value="PVC SV"/>
       <xs:enumeration value="ST"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="DiameterMantelbuis">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DiameterMantelbuis">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="100"/>
       <xs:enumeration value="107"/>
       <xs:enumeration value="108"/>
@@ -1835,10 +1807,10 @@
       <xs:enumeration value="90"/>
       <xs:enumeration value="914.4"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Thema">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Thema">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="DATA"/>
       <xs:enumeration value="ET_HS"/>
       <xs:enumeration value="ET_LHS"/>
@@ -1846,10 +1818,10 @@
       <xs:enumeration value="ET_MS"/>
       <xs:enumeration value="GAS_HD"/>
       <xs:enumeration value="GAS_LD"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ObjectType">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ObjectType">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aarddraad"/>
       <xs:enumeration value="Gleiding"/>
       <xs:enumeration value="HSkabel"/>
@@ -1860,22 +1832,22 @@
       <xs:enumeration value="Oliedrukleiding"/>
       <xs:enumeration value="Tbuis"/>
       <xs:enumeration value="Tkabel"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortBescherming">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortBescherming">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Afdekplaat"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="BijlageTypeValue">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BijlageTypeValue">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Foto"/>
       <xs:enumeration value="Gestuurde boring"/>
       <xs:enumeration value="Zinkertekening"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="BestandMediaTypeValue">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BestandMediaTypeValue">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="DWG"/>
       <xs:enumeration value="JPEG"/>
       <xs:enumeration value="JSON"/>
@@ -1883,31 +1855,31 @@
       <xs:enumeration value="PNG"/>
       <xs:enumeration value="TIFF"/>
       <xs:enumeration value="XML"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortKunstwerk">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortKunstwerk">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="KATTENRUG"/>
       <xs:enumeration value="KEUZE ONTBREEKT IN LIJST"/>
       <xs:enumeration value="ZINKER "/>
       <xs:enumeration value="ZINKER_BOOG"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortAanlegTechniek">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortAanlegTechniek">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="GESTUURDE TECHNIEK"/>
       <xs:enumeration value="KEUZE ONTBREEKT IN LIJST"/>
       <xs:enumeration value="PIPEBURSTING"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="InUit">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InUit">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Intredepunt"/>
       <xs:enumeration value="Uittredepunt"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieGasStation">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieGasStation">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Afleverstation"/>
       <xs:enumeration value="Boosterstation"/>
       <xs:enumeration value="District- en Afleverstation"/>
@@ -1929,42 +1901,42 @@
       <xs:enumeration value="Overslagstation"/>
       <xs:enumeration value="Signaalkast"/>
       <xs:enumeration value="Waterstof Ontvangststation"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="BewerkingGas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BewerkingGas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="IB STELLEN"/>
       <xs:enumeration value="IG NEMEN"/>
       <xs:enumeration value="RELINEN"/>
       <xs:enumeration value="RS STELLEN"/>
       <xs:enumeration value="VERLATEN"/>
       <xs:enumeration value="VERPLAATSEN"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="VerbindingstechniekGas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VerbindingstechniekGas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Elektrolas"/>
       <xs:enumeration value="HSF Peko koppeling TV"/>
       <xs:enumeration value="Las"/>
       <xs:enumeration value="Mof"/>
       <xs:enumeration value="Spiegellas"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="NetvlakGas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NetvlakGas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="HD"/>
       <xs:enumeration value="LD"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="KBaanwezig">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="KBaanwezig">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Ja"/>
       <xs:enumeration value="N.v.t. - geen staal"/>
       <xs:enumeration value="Nee"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Druk">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Druk">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="1 BAR"/>
       <xs:enumeration value="100 MBAR"/>
       <xs:enumeration value="2 BAR"/>
@@ -1973,10 +1945,10 @@
       <xs:enumeration value="30 MBAR"/>
       <xs:enumeration value="4 BAR"/>
       <xs:enumeration value="8 BAR"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="BuisbekledingGas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BuisbekledingGas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Bitumen"/>
       <xs:enumeration value="Gegalvaniseerd"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
@@ -1985,10 +1957,10 @@
       <xs:enumeration value="PE extrusie"/>
       <xs:enumeration value="PE gesinterd"/>
       <xs:enumeration value="Sleeve"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="VerbindingbekledingGas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VerbindingbekledingGas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Densoleen"/>
       <xs:enumeration value="Enkapress"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
@@ -1996,10 +1968,10 @@
       <xs:enumeration value="Onbekleed"/>
       <xs:enumeration value="PE bandage"/>
       <xs:enumeration value="Polyurethaan"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="BuitenDiameterGasleiding">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BuitenDiameterGasleiding">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="110"/>
       <xs:enumeration value="114.3"/>
       <xs:enumeration value="15"/>
@@ -2030,10 +2002,10 @@
       <xs:enumeration value="75"/>
       <xs:enumeration value="88.9"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="MateriaalGasleiding">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MateriaalGasleiding">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="CU"/>
       <xs:enumeration value="Kousijzer"/>
       <xs:enumeration value="Overig"/>
@@ -2044,55 +2016,55 @@
       <xs:enumeration value="PVCsv"/>
       <xs:enumeration value="ST"/>
       <xs:enumeration value="ST-PE"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SDRgas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SDRgas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="11"/>
       <xs:enumeration value="17.6"/>
       <xs:enumeration value="33"/>
       <xs:enumeration value="41"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FabrikantGasLeiding">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FabrikantGasLeiding">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortGas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortGas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aardgas"/>
       <xs:enumeration value="Hoogcalorisch gas"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Waterstof"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FabrikantGasAfsluiter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FabrikantGasAfsluiter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AVK"/>
       <xs:enumeration value="Flowserve"/>
       <xs:enumeration value="Hawle"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="RMA/Rheinau"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortGasAfsluiter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortGasAfsluiter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Kogel"/>
       <xs:enumeration value="Schuif"/>
       <xs:enumeration value="Vlinderklep"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="DrukklasseGasAfsluiter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DrukklasseGasAfsluiter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="PN 10"/>
       <xs:enumeration value="PN 16"/>
       <xs:enumeration value="PN 40"/>
       <xs:enumeration value="PN 8"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="MateriaalGasAfsluiter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MateriaalGasAfsluiter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="GGG"/>
       <xs:enumeration value="GIJ"/>
       <xs:enumeration value="HPE"/>
@@ -2102,16 +2074,16 @@
       <xs:enumeration value="PE+GGG"/>
       <xs:enumeration value="POM"/>
       <xs:enumeration value="ST"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="DraaiwijzeGasAfsluiter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DraaiwijzeGasAfsluiter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Linksom"/>
       <xs:enumeration value="Rechtsom"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieGasAfsluiter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieGasAfsluiter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aansluitleiding"/>
       <xs:enumeration value="Afblaas"/>
       <xs:enumeration value="Eind"/>
@@ -2119,25 +2091,25 @@
       <xs:enumeration value="Sectie"/>
       <xs:enumeration value="StationsAfsluiterinlaat"/>
       <xs:enumeration value="StationsAfsluiteruitlaat"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="VerbindingstechniekGasAfsluiter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VerbindingstechniekGasAfsluiter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Elektrolas"/>
       <xs:enumeration value="Flens"/>
       <xs:enumeration value="Las"/>
       <xs:enumeration value="Mof"/>
       <xs:enumeration value="Spiegellas"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="Voorkeurstand">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Voorkeurstand">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Dicht"/>
       <xs:enumeration value="Open"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringGasTstuk">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringGasTstuk">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Las T-stuk"/>
       <xs:enumeration value="MMB GY"/>
@@ -2149,17 +2121,17 @@
       <xs:enumeration value="T-stuk Hawle"/>
       <xs:enumeration value="T-stuk PE 100 spie-eind"/>
       <xs:enumeration value="T-stuk PE Steek"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortGasAansluiting">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortGasAansluiting">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Primaire aansluiting"/>
       <xs:enumeration value="Secundaire aansluiting"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringAftakzadel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringAftakzadel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Autoperf"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Mueller-T"/>
@@ -2173,10 +2145,10 @@
       <xs:enumeration value="Zadel aftak RVS"/>
       <xs:enumeration value="Zadel aftak RVS tbv Polsafe"/>
       <xs:enumeration value="Zadel aftak T-stuk RVS"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringEindstuk">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringEindstuk">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Blindflens"/>
       <xs:enumeration value="Dop"/>
       <xs:enumeration value="Eindkap CU"/>
@@ -2199,10 +2171,10 @@
       <xs:enumeration value="MJ-Koppeling Mof-Blind/Tv NGIJ 46-71"/>
       <xs:enumeration value="MJ-Koppeling Mof-Blind/Tv NGIJ 63-90"/>
       <xs:enumeration value="MJ-Koppeling Mof-Blind/Tv NGIJ 84-105"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortGasAppendage">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortGasAppendage">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Electrolasmof"/>
       <xs:enumeration value="Flensverbinding"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
@@ -2213,38 +2185,38 @@
       <xs:enumeration value="Stoppel"/>
       <xs:enumeration value="Tornippel"/>
       <xs:enumeration value="Tornippel  2&amp;quot;"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FabrikantGasAppendage">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FabrikantGasAppendage">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="KZ"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="AppendagebekledingGas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AppendagebekledingGas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Onbekleed"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieGasIsolatiestuk">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieGasIsolatiestuk">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Netscheiding"/>
       <xs:enumeration value="Ringscheiding"/>
       <xs:enumeration value="Sectiescheiding"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringGasIsolatiestuk">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringGasIsolatiestuk">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Isolatieflens PVCsv"/>
       <xs:enumeration value="Isolatieflens ST"/>
       <xs:enumeration value="Isolatiestuk PERTINAX"/>
       <xs:enumeration value="Isolatiestuk ST"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringGasOvergangsstuk">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringGasOvergangsstuk">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="BRS Pers koppeling Brons Spie Pers"/>
       <xs:enumeration value="El-las PE 100 Mof"/>
       <xs:enumeration value="El-las sdr11 +Stb PE 100 Mof"/>
@@ -2279,35 +2251,35 @@
       <xs:enumeration value="ST Spie"/>
       <xs:enumeration value="Steek las PE 100 Spie"/>
       <xs:enumeration value="Verlengd PVCsv Mof"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortGasMeetpunt">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortGasMeetpunt">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Druk meting"/>
       <xs:enumeration value="Flow meting"/>
       <xs:enumeration value="Gasdetectie meting"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Temperatuur meting"/>
       <xs:enumeration value="THT meting"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="KoppelingAansluitleidingOSE">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="KoppelingAansluitleidingOSE">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Kniekoppeling"/>
       <xs:enumeration value="MFK"/>
       <xs:enumeration value="Spie eind"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="KoppelingGeveldoorvoerOSE">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="KoppelingGeveldoorvoerOSE">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Clickmoer"/>
       <xs:enumeration value="Kniekoppeling"/>
       <xs:enumeration value="PE onder fundatie"/>
       <xs:enumeration value="Vast"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringOntspanningselement">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringOntspanningselement">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Nieuw HSF PE 32 mm SDR: 3 Armlengte: 800 mm"/>
       <xs:enumeration value="Nieuw HSF PE 40 mm SDR: 3.7 Armlengte: 800 mm"/>
@@ -2317,48 +2289,48 @@
       <xs:enumeration value="Renovatie op bestaand HSF PE 40 mm SDR: 3.7 Armlengte: 800 mm"/>
       <xs:enumeration value="Verticaal ZGC Pipelife PE100 110 mm SDR: 17.6 Armlengte: 800 mm"/>
       <xs:enumeration value="Verticaal ZGC Pipelife PE100 63 mm SDR: 17.6 Armlengte: 800 mm"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortGasAfsluiterAfblaas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortGasAfsluiterAfblaas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Kogel-Flens"/>
       <xs:enumeration value="Kogel-Las"/>
       <xs:enumeration value="Schuif-Flens"/>
       <xs:enumeration value="Schuif-Las"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortGasLeidingafblaas">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortGasLeidingafblaas">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Prefab"/>
       <xs:enumeration value="Samengesteld"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FabrikantKBgelijkrichter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FabrikantKBgelijkrichter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Hellas"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Van der Heide"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringKBgelijkrichter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringKBgelijkrichter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Hellas AM1 25V"/>
       <xs:enumeration value="Hellas AM2 50V"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Van der Heide H-84-025-10"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="MateriaalBehuizingKBgelijkrichter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MateriaalBehuizingKBgelijkrichter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Kunststof"/>
       <xs:enumeration value="RVS"/>
       <xs:enumeration value="Staal"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="TypeKBbehuizingGelijkrichter">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeKBbehuizingGelijkrichter">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Beton"/>
       <xs:enumeration value="Kast"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
@@ -2366,10 +2338,10 @@
       <xs:enumeration value="RVS"/>
       <xs:enumeration value="RVS kast"/>
       <xs:enumeration value="Straatpot"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieKBmeetpaal">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieKBmeetpaal">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Eindpunt route/netscheiding"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Magnesiumlint vaste meetcel"/>
@@ -2388,24 +2360,24 @@
       <xs:enumeration value="Netscheiding Alliander-derden"/>
       <xs:enumeration value="Overbrugging"/>
       <xs:enumeration value="Ringscheiding"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="TypeKBbehuizingMeetpaal">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeKBbehuizingMeetpaal">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aluminium meetpaal"/>
       <xs:enumeration value="Betonnen meetpaal"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Kunststof meetpaal"/>
       <xs:enumeration value="RVS meetpaal"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="TypeKBmeetelectrode">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeKBmeetelectrode">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="KabelkleurKBdraad">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="KabelkleurKBdraad">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Blank-koper"/>
       <xs:enumeration value="Blauw"/>
       <xs:enumeration value="Geel"/>
@@ -2415,19 +2387,19 @@
       <xs:enumeration value="Rood-Zwart"/>
       <xs:enumeration value="Wit"/>
       <xs:enumeration value="Zwart"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringKBdraad">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringKBdraad">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="10mm"/>
       <xs:enumeration value="16mm"/>
       <xs:enumeration value="25mm"/>
       <xs:enumeration value="50mm"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieKBdraad">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieKBdraad">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aarding"/>
       <xs:enumeration value="Anders"/>
       <xs:enumeration value="Coupon"/>
@@ -2451,10 +2423,10 @@
       <xs:enumeration value="Permanente referentie elektrode"/>
       <xs:enumeration value="Shunt"/>
       <xs:enumeration value="Spoor"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SubfunctieKBdraad">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SubfunctieKBdraad">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="2e meetpunt"/>
       <xs:enumeration value="2e meetpunt kathodezijde gelijkrichter"/>
       <xs:enumeration value="2e meetpunt zijde mg-anode"/>
@@ -2474,68 +2446,68 @@
       <xs:enumeration value="Uitlaat"/>
       <xs:enumeration value="Zijde mg-anode"/>
       <xs:enumeration value="Zinker"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortKBanode">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortKBanode">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Anodebed (AN)"/>
       <xs:enumeration value="Diepte Anodebed"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="MateriaalKBanode">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MateriaalKBanode">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="CuSO4"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Magnesium"/>
       <xs:enumeration value="Silicium-IJzer"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="TypeKBdrainage">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeKBdrainage">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="DR-AC"/>
       <xs:enumeration value="DR-DC"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FabrikantKBdrainage">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FabrikantKBdrainage">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="StroomsoortKBdrainage">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StroomsoortKBdrainage">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AC"/>
       <xs:enumeration value="DC"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortKBobject">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortKBobject">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aarding"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Referentiecel Cu (RF-CU)"/>
       <xs:enumeration value="Referentiecel Fe (RF-Fe)"/>
       <xs:enumeration value="Referentiecel Zn (RF-ZN)"/>
       <xs:enumeration value="Steraarde"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieTelecomMof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieTelecomMof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Aftakmof"/>
       <xs:enumeration value="Eindmof"/>
       <xs:enumeration value="Verbindingsmof"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringTelecomBuis">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringTelecomBuis">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="32 HDPE"/>
       <xs:enumeration value="40 HDPE"/>
       <xs:enumeration value="50 HDPE"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="KleurTelecombuis">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="KleurTelecombuis">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Blauw"/>
       <xs:enumeration value="Bruin"/>
       <xs:enumeration value="Geel"/>
@@ -2546,15 +2518,15 @@
       <xs:enumeration value="Rood"/>
       <xs:enumeration value="Wit"/>
       <xs:enumeration value="Zwart"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SpanningsniveauHSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SpanningsniveauHSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="50 kV"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringHSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringHSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="1x1200Al"/>
       <xs:enumeration value="1x1200CU"/>
       <xs:enumeration value="1x1600Al"/>
@@ -2570,10 +2542,10 @@
       <xs:enumeration value="3x400Al"/>
       <xs:enumeration value="3x400Alrm"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="OpbouwHSKabel">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OpbouwHSKabel">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="EYLKrvdlwd"/>
       <xs:enumeration value="EYLKrvlwd"/>
       <xs:enumeration value="GYLKRV"/>
@@ -2590,10 +2562,10 @@
       <xs:enumeration value="YMeKrvl"/>
       <xs:enumeration value="YMvkKrvc"/>
       <xs:enumeration value="YMvKrvas"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UitvoeringHSMof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UitvoeringHSMof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Eindmof/Krimpdop"/>
       <xs:enumeration value="Eindmof/Loodkap"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
@@ -2603,36 +2575,36 @@
       <xs:enumeration value="Verbindingsmof/CFJ-72-T"/>
       <xs:enumeration value="Verbindingsmof/MOA-5000"/>
       <xs:enumeration value="Verbindingsmof/MSA72-DOS"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FabrikantHSMof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FabrikantHSMof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Felten en Guilleaume"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="NKF"/>
       <xs:enumeration value="Pfisterer"/>
       <xs:enumeration value="Pirelli"/>
       <xs:enumeration value="Prysmian"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieHSmof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieHSmof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Eindmof"/>
       <xs:enumeration value="Loodkop"/>
       <xs:enumeration value="Spreidmof"/>
       <xs:enumeration value="Verbindingsmof"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoortTelecomBuisAppendage">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoortTelecomBuisAppendage">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="BUISKOPPELING"/>
       <xs:enumeration value="EINDKAP"/>
       <xs:enumeration value="HANDHOLE"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FunctieLSmof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctieLSmof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AANSLUIT AFTAK"/>
       <xs:enumeration value="AFTAK"/>
       <xs:enumeration value="AFTAK VERBINDING"/>
@@ -2642,46 +2614,83 @@
       <xs:enumeration value="OMKOKERING"/>
       <xs:enumeration value="VERBINDING"/>
       <xs:enumeration value="ZEGELWIJZIGING"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="TypeLSMof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeLSMof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="AVM 58-220"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
       <xs:enumeration value="Krimpdop"/>
       <xs:enumeration value="Tweelingmof"/>
       <xs:enumeration value="Wikkelmof"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FabrikantLSMof">
-		<xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FabrikantLSMof">
+    <xs:restriction base="xs:string">
       <xs:enumeration value="Filoform"/>
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
-		</xs:restriction>
-	</xs:simpleType>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MSKabelType">
+    <xs:complexContent>
+      <xs:extension base="basisType">
+        <xs:sequence>
+          <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
+          <xs:element name="DatumFabricage" type="xs:date" minOccurs="0"/>
+          <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
+          <xs:element name="FaseAanduiding" type="nnnuf:Faseaanduiding" minOccurs="0"/>
+          <xs:element name="Zegeltekst" type="xs:string" minOccurs="0"/>
+          <xs:element name="Fabrikant" type="nnnuf:FabrikantKabel" minOccurs="0"/>
+          <xs:element name="Inmeetwijze" type="nnnuf:Inmeetwijze" minOccurs="0"/>
+          <xs:element name="Nauwkeurigheid" type="nnnuf:NauwkeurigheidXYvalue" minOccurs="0"/>
+          <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
+          <xs:element name="RedenNietVerwijdering" type="nnnuf:RedenNietVerwijdering" minOccurs="0"/>
+          <xs:element name="Uitvoering" type="nnnuf:UitvoeringMSKabel" minOccurs="0"/>
+          <xs:element name="KabelOpbouw" type="nnnuf:OpbouwMSKabel" minOccurs="0"/>
+          <xs:element name="OmschrijvingUitvoering" type="xs:string" minOccurs="0"/>
+          <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0"/>
+          <xs:element name="Subnettype" type="nnnuf:Subnettype" minOccurs="0"/>
+          <xs:element name="Spanningsniveau" type="nnnuf:SpanningsniveauMSKabel" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="MSstationType">
-    <xs:sequence>
+    <xs:complexContent>
+      <xs:extension base="basisType">
+        <xs:sequence>
+          <xs:element name="Naam" type="nnnuf:NaamType" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Nummer" type="nnnuf:StationsNummerType" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Adres" type="nnnuf:adresType" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Toelichting" type="nnnuf:ToelichtingType" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="DatumAanleg" type="nnnuf:AanlegDatumType" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="BAGID" type="nnnuf:BAGIDType" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Functie" type="nnnuf:FunctieElectraStation" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="vlakgeometrie2D" type="gml:SurfaceType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="basisType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
       <xs:element name="Handle" type="nnnuf:HandleType" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="Toelichting" type="nnnuf:ToelichtingType" minOccurs="0" maxOccurs="1"/>
       <xs:element name="GisId" type="nnnuf:GISIDType" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="Naam" type="nnnuf:NaamType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Nummer" type="nnnuf:StationsNummerType" minOccurs="0" maxOccurs="1"/>
       <xs:element name="Status" type="nnnuf:Status" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="DatumAanleg" type="nnnuf:AanlegDatumType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Postcode" type="nnnuf:PostcodeType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Huisnummer" type="nnnuf:HuisnummerType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="HuisnummerToevoeging" type="nnnuf:HuisnummerToevoegingType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Straatnaam" type="nnnuf:StraatnaamType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="AssetId" type="nnnuf:AssetIDType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="BAGID" type="nnnuf:BAGIDType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Plaatsnaam" type="nnnuf:PlaatsnaamType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Functie" type="nnnuf:FunctieElectraStation" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0" maxOccurs="1"/>
       <xs:element name="Artikelcodering" type="nnnuf:ArtikelCoderingType" minOccurs="0" maxOccurs="1"/>
       <xs:element name="NLCS_CRUD" type="nnnuf:CRUDType" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="vlakgeometrie2D" type="gml:SurfaceType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="AssetId" type="nnnuf:AssetIDType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adresType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="Postcode" type="nnnuf:PostcodeType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Straatnaam" type="nnnuf:StraatnaamType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Huisnummer" type="nnnuf:HuisnummerType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="HuisnummerToevoeging" type="nnnuf:HuisnummerToevoegingType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Plaatsnaam" type="nnnuf:PlaatsnaamType" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="HandleType">
