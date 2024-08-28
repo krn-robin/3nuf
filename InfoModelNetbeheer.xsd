@@ -34,7 +34,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="MSkabel" type="MSkabelType"/>
+  <xs:element name="MSkabel" type="nnnuf:MSKabelType"/>
   <xs:element name="OVLoverdrachtspunt">
     <xs:complexType>
       <xs:sequence>
@@ -2633,8 +2633,8 @@
   </xs:simpleType>
   <xs:complexType name="MSKabelType">
     <xs:complexContent>
-      <xs:extension base="basisType">
-        <xs:sequence>
+      <xs:extension base="nnnuf:basisType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
           <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
           <xs:element name="DatumFabricage" type="xs:date" minOccurs="0"/>
           <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
@@ -2657,8 +2657,8 @@
   </xs:complexType>
   <xs:complexType name="MSstationType">
     <xs:complexContent>
-      <xs:extension base="basisType">
-        <xs:sequence>
+      <xs:extension base="nnnuf:basisType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
           <xs:element name="Naam" type="nnnuf:NaamType" minOccurs="0" maxOccurs="1"/>
           <xs:element name="Nummer" type="nnnuf:StationsNummerType" minOccurs="0" maxOccurs="1"/>
           <xs:element name="Adres" type="nnnuf:adresType" minOccurs="0" maxOccurs="1"/>
