@@ -3,19 +3,6 @@
   <Handle>417D</Handle>
   <GisId>54321</GisId>
   <Status>BESTAAND</Status>
-  <AssetId>{86AB49FB-3CFC-470F-9A2E-AFC73C96E033}</AssetId>
-  <Naam>MS-12345 Teststation</Naam>
-  <Nummer>12345</Nummer>
-  <Adres>
-    <Postcode>1234 AB</Postcode>
-    <Straatnaam>Straatnaam</Straatnaam>
-    <Huisnummer>100</Huisnummer>
-    <HuisnummerToevoeging>tv</HuisnummerToevoeging>
-    <Plaatsnaam>Plaatsnaam</Plaatsnaam>
-  </Adres>
-  <DatumAanleg>2023-10-10</DatumAanleg>
-  <Eigenaar>Netbeheerder</Eigenaar>
-  <Beheerder>Netbeheerder</Beheerder>
   <Functie>NETSTATION</Functie>
   <vlakgeometrie2D>
       <gml:exterior>

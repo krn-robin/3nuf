@@ -2668,7 +2668,7 @@
           <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
           <xs:element name="BAGID" type="nnnuf:BAGIDType" minOccurs="0" maxOccurs="1"/>
           <xs:element name="Functie" type="nnnuf:FunctieElectraStation" minOccurs="1" maxOccurs="1"/>
-          <xs:element name="vlakgeometrie2D" type="gml:SurfaceType" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="vlakgeometrie2D" type="nnnuf:vlakType" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -2692,6 +2692,11 @@
       <xs:element name="HuisnummerToevoeging" type="nnnuf:HuisnummerToevoegingType" minOccurs="1" maxOccurs="1"/>
       <xs:element name="Plaatsnaam" type="nnnuf:PlaatsnaamType" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vlakType">
+    <xs:complexContent>
+      <xs:extension base="gml:PolygonType"/>
+    </xs:complexContent>
   </xs:complexType>
   <xs:simpleType name="HandleType">
     <xs:restriction base="xs:hexBinary"/>

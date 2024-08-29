@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<nnnuf:MSstation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nnnuf="http://nnnuf.net/xsd/0.9" xsi:schemaLocation="http://nnnuf.net/xsd/0.9 ../../InfoModelNetbeheer.xsd ">
+<nnnuf:MSstation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nnnuf="http://nnnuf.net/xsd/0.9" xmlns:gml="http://www.opengis.net/gml/3.2" xsi:schemaLocation="http://nnnuf.net/xsd/0.9 ../../InfoModelNetbeheer.xsd ">
   <GisId>54321</GisId>
   <Status>BESTAAND</Status>
   <AssetId>{86AB49FB-3CFC-470F-9A2E-AFC73C96E033}</AssetId>
@@ -16,4 +16,11 @@
   <Eigenaar>Netbeheerder</Eigenaar>
   <Beheerder>Netbeheerder</Beheerder>
   <Functie>NETSTATION</Functie>
+  <vlakgeometrie2D>
+      <gml:exterior>
+	<gml:LinearRing>
+	  <gml:posList>-10.0 -10.0 20.0 -10.0 20.0 20.0 -10.0 20.0 -10.0 -10.0</gml:posList>
+	</gml:LinearRing>
+      </gml:exterior>
+  </vlakgeometrie2D>
 </nnnuf:MSstation>
