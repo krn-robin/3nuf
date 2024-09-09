@@ -1,40 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nnnuf="http://nnnuf.net/xsd/0.9" xmlns:gml="http://www.opengis.net/gml/3.2" version="0.9" targetNamespace="http://nnnuf.net/xsd/0.9">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nnnuf="http://nnnuf.net/xsd/0.9" xmlns:gml="http://www.opengis.net/gml/3.2" version="0.9" targetNamespace="http://nnnuf.net/xsd/0.9" elementFormDefault="qualified">
   <xs:import schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" namespace="http://www.opengis.net/gml/3.2"/>
-  <xs:element name="LSkabel">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Handle" type="xs:string" minOccurs="1"/>
-        <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
-        <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
-        <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
-        <xs:element name="Subnettype" type="nnnuf:SubnettypeLS" minOccurs="0"/>
-        <xs:element name="DatumFabricage" type="xs:date" minOccurs="0"/>
-        <xs:element name="FaseAanduiding" type="nnnuf:Faseaanduiding" minOccurs="0"/>
-        <xs:element name="Zegeltekst" type="xs:string" minOccurs="0"/>
-        <xs:element name="Fabrikant" type="nnnuf:FabrikantKabel" minOccurs="0"/>
-        <xs:element name="Inmeetwijze" type="nnnuf:Inmeetwijze" minOccurs="0"/>
-        <xs:element name="Nauwkeurigheid" type="nnnuf:NauwkeurigheidXYvalue" minOccurs="0"/>
-        <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
-        <xs:element name="RedenNietVerwijdering" type="nnnuf:RedenNietVerwijdering" minOccurs="0"/>
-        <xs:element name="Aardingsysteem" type="nnnuf:Aardingsysteem" minOccurs="0"/>
-        <xs:element name="Uitvoering" type="nnnuf:UitvoeringLSKabel" minOccurs="0"/>
-        <xs:element name="KabelOpbouw" type="nnnuf:OpbouwLSKabel" minOccurs="0"/>
-        <xs:element name="OmschrijvingUitvoering" type="xs:string" minOccurs="0"/>
-        <xs:element name="Functie" type="nnnuf:FunctieLSKabel" minOccurs="0"/>
-        <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
-        <xs:element name="GisId" type="xs:string" minOccurs="0"/>
-        <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0"/>
-        <xs:element name="AssetId" type="xs:string" minOccurs="0"/>
-        <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
-        <xs:element name="Bovengronds" type="nnnuf:JaNee" minOccurs="0"/>
-        <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
-        <xs:element name="Spanningsniveau" type="nnnuf:SpanningsniveauLSKabel" minOccurs="0"/>
-        <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="MSkabel" type="nnnuf:MSKabelType"/>
+  <xs:complexType name="basisKabelType">
+    <xs:complexContent>
+      <xs:extension base="nnnuf:basisType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+          <xs:element name="DatumAanleg" type="xs:date" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="DatumFabricage" type="xs:date" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
+	  <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="FaseAanduiding" type="nnnuf:Faseaanduiding" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Zegeltekst" type="xs:string" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Fabrikant" type="nnnuf:FabrikantKabel" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Inmeetwijze" type="nnnuf:Inmeetwijze" minOccurs="0" maxOccurs="1"/>
+	  <xs:element name="Aardingsysteem" type="nnnuf:Aardingsysteem" minOccurs="0"/>
+          <xs:element name="Nauwkeurigheid" type="nnnuf:NauwkeurigheidXYvalue" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="RedenNietVerwijdering" type="nnnuf:RedenNietVerwijdering" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="OmschrijvingUitvoering" type="xs:string" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Subnettype" type="nnnuf:Subnettype" minOccurs="0" maxOccurs="1"/>
+	  <xs:element name="Toelichting" type="xs:string" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Bovengronds" type="nnnuf:JaNee" minOccurs="0" maxOccurs="1"/>
+	  <xs:element name="lijngeometrie2D" type="nnnuf:lijnType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LSkabelType">
+    <xs:complexContent>
+      <xs:extension base="nnnuf:basisKabelType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+	  <xs:element name="Functie" type="nnnuf:FunctieLSKabel" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Uitvoering" type="nnnuf:UitvoeringLSKabel" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="KabelOpbouw" type="nnnuf:OpbouwLSKabel" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Spanningsniveau" type="nnnuf:SpanningsniveauLSKabel" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MSKabelType">
+    <xs:complexContent>
+      <xs:extension base="nnnuf:basisKabelType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+          <xs:element name="Uitvoering" type="nnnuf:UitvoeringMSKabel" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="KabelOpbouw" type="nnnuf:OpbouwMSKabel" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Spanningsniveau" type="nnnuf:SpanningsniveauMSKabel" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="OVLoverdrachtspunt">
     <xs:complexType>
       <xs:sequence>
@@ -116,8 +130,6 @@
         <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
-  </xs:element>
-  <xs:element name="MSstation" type="nnnuf:MSstationType">
   </xs:element>
   <xs:element name="MSoverdrachtspunt">
     <xs:complexType>
@@ -1209,35 +1221,31 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="LSmof">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Handle" type="xs:string" minOccurs="1"/>
-        <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
-        <xs:element name="Functie" type="nnnuf:FunctieLSmof" minOccurs="0"/>
-        <xs:element name="Status" type="nnnuf:Status" minOccurs="0"/>
-        <xs:element name="Subnettype" type="nnnuf:SubnettypeLS" minOccurs="0"/>
-        <xs:element name="DoorverbindingAardeNul" type="nnnuf:JaNee" minOccurs="0"/>
-        <xs:element name="Type" type="nnnuf:TypeLSMof" minOccurs="0"/>
-        <xs:element name="Fabrikant" type="nnnuf:FabrikantLSMof" minOccurs="0"/>
-        <xs:element name="Bewerking" type="nnnuf:Bewerking" minOccurs="0"/>
-        <xs:element name="GisId" type="xs:string" minOccurs="0"/>
-        <xs:element name="AssetId" type="xs:string" minOccurs="0"/>
-        <xs:element name="Toelichting" type="xs:string" minOccurs="0"/>
-        <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
-        <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
-        <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0"/>
-        <xs:element name="Artikelcodering" type="xs:string" minOccurs="0"/>
-        <xs:element name="AardeGekoppeld" type="nnnuf:JaNee" minOccurs="0"/>
-        <xs:element name="NetGekoppeld" type="nnnuf:JaNee" minOccurs="0"/>
-        <xs:element name="OvlGekoppeld" type="nnnuf:JaNee" minOccurs="0"/>
-        <xs:element name="TariefGekoppeld" type="nnnuf:JaNee" minOccurs="0"/>
-        <xs:element name="NulGekoppeld" type="nnnuf:JaNee" minOccurs="0"/>
-        <xs:element name="Bovengronds" type="nnnuf:JaNee" minOccurs="0"/>
-        <xs:element name="NLCS_CRUD" type="xs:string" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:complexType name="LSmofType">
+    <xs:complexContent>
+      <xs:extension base="nnnuf:basisType">
+	<xs:sequence minOccurs="1" maxOccurs="1">
+          <xs:element name="DatumAanleg" type="xs:date" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Functie" type="nnnuf:FunctieLSmof" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Subnettype" type="nnnuf:SubnettypeLS" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="DoorverbindingAardeNul" type="nnnuf:JaNee" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Type" type="nnnuf:TypeLSMof" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Fabrikant" type="nnnuf:FabrikantLSMof" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Toelichting" type="xs:string" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="AardeGekoppeld" type="nnnuf:JaNee" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="NetGekoppeld" type="nnnuf:JaNee" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="OvlGekoppeld" type="nnnuf:JaNee" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="TariefGekoppeld" type="nnnuf:JaNee" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="NulGekoppeld" type="nnnuf:JaNee" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Bovengronds" type="nnnuf:JaNee" minOccurs="0" maxOccurs="1"/>
+	  <xs:element name="puntgeometrie2D" type="nnnuf:puntType" minOccurs="0" maxOccurs="1"/>
+	</xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:simpleType name="EigenaarBeheerder">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Derden"/>
@@ -2631,30 +2639,6 @@
       <xs:enumeration value="Keuze ontbreekt in lijst"/>
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="MSKabelType">
-    <xs:complexContent>
-      <xs:extension base="nnnuf:basisType">
-        <xs:sequence minOccurs="1" maxOccurs="1">
-          <xs:element name="DatumAanleg" type="xs:date" minOccurs="0"/>
-          <xs:element name="DatumFabricage" type="xs:date" minOccurs="0"/>
-          <xs:element name="Eigenaar" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
-          <xs:element name="FaseAanduiding" type="nnnuf:Faseaanduiding" minOccurs="0"/>
-          <xs:element name="Zegeltekst" type="xs:string" minOccurs="0"/>
-          <xs:element name="Fabrikant" type="nnnuf:FabrikantKabel" minOccurs="0"/>
-          <xs:element name="Inmeetwijze" type="nnnuf:Inmeetwijze" minOccurs="0"/>
-          <xs:element name="Nauwkeurigheid" type="nnnuf:NauwkeurigheidXYvalue" minOccurs="0"/>
-          <xs:element name="Beheerder" type="nnnuf:EigenaarBeheerder" minOccurs="0"/>
-          <xs:element name="RedenNietVerwijdering" type="nnnuf:RedenNietVerwijdering" minOccurs="0"/>
-          <xs:element name="Uitvoering" type="nnnuf:UitvoeringMSKabel" minOccurs="0"/>
-          <xs:element name="KabelOpbouw" type="nnnuf:OpbouwMSKabel" minOccurs="0"/>
-          <xs:element name="OmschrijvingUitvoering" type="xs:string" minOccurs="0"/>
-          <xs:element name="Verbindingnummer" type="xs:string" minOccurs="0"/>
-          <xs:element name="Subnettype" type="nnnuf:Subnettype" minOccurs="0"/>
-          <xs:element name="Spanningsniveau" type="nnnuf:SpanningsniveauMSKabel" minOccurs="0"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="MSstationType">
     <xs:complexContent>
       <xs:extension base="nnnuf:basisType">
@@ -2696,6 +2680,16 @@
   <xs:complexType name="vlakType">
     <xs:complexContent>
       <xs:extension base="gml:PolygonType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="lijnType">
+    <xs:complexContent>
+      <xs:extension base="gml:CurvePropertyType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="puntType">
+    <xs:complexContent>
+      <xs:extension base="gml:PointPropertyType"/>
     </xs:complexContent>
   </xs:complexType>
   <xs:simpleType name="HandleType">
@@ -2770,4 +2764,12 @@
     <!-- UNDOCUMENTED TYPE -->
     <xs:restriction base="xs:string"/>
   </xs:simpleType>
+  <xs:complexType name="NetbeheerInfoUitwisselingType">
+    <xs:all>
+      <xs:element name="LSkabel" type="nnnuf:LSkabelType" minOccurs="0" maxOccurs="0"/>
+      <xs:element name="LSmof" type="nnnuf:LSmofType" minOccurs="0" maxOccurs="0"/>
+      <xs:element name="MSstation" type="nnnuf:MSstationType" minOccurs="0" maxOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="NetbeheerInfoUitwisseling" type="nnnuf:NetbeheerInfoUitwisselingType"/>
 </xs:schema>

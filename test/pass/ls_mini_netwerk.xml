@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<nnnuf:NetbeheerInfoUitwisseling xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nnnuf="http://nnnuf.net/xsd/0.9" xmlns:gml="http://www.opengis.net/gml/3.2" xsi:schemaLocation="http://nnnuf.net/xsd/0.9 ../../InfoModelNetbeheer.xsd ">
+  <LSkabel>
+    <Handle>417D</Handle>
+    <GisId>12345</GisId>
+    <Status>BESTAAND</Status>
+    <Functie>LS</Functie>
+    <Uitvoering>4x150Al as50Cu</Uitvoering>
+    <KabelOpbouw>V-VMvKh-sas</KabelOpbouw>
+    <Spanningsniveau>400V</Spanningsniveau>
+    <lijngeometrie2D>
+      <gml:LineString>
+        <gml:posList>1000.0 1000.0 6000.0 1000.0</gml:posList>
+      </gml:LineString>
+    </lijngeometrie2D>
+  </LSkabel>
+  <LSkabel>
+    <Handle>417E</Handle>
+    <GisId>12346</GisId>
+    <Status>BESTAAND</Status>
+    <Functie>LS</Functie>
+    <Uitvoering>4x150Al as50Cu</Uitvoering>
+    <KabelOpbouw>V-VMvKh-sas</KabelOpbouw>
+    <Spanningsniveau>400V</Spanningsniveau>
+    <lijngeometrie2D>
+      <gml:LineString>
+        <gml:posList>6000.0 1000.0 13000.0 1000.0</gml:posList>
+      </gml:LineString>
+    </lijngeometrie2D>
+  </LSkabel>
+  <LSkabel>
+    <Handle>417F</Handle>
+    <GisId>12347</GisId>
+    <Status>BESTAAND</Status>
+    <Functie>LS</Functie>
+    <Uitvoering>4x150Al as50Cu</Uitvoering>
+    <KabelOpbouw>V-VMvKh-sas</KabelOpbouw>
+    <Spanningsniveau>400V</Spanningsniveau>
+    <lijngeometrie2D>
+      <gml:LineString>
+        <gml:posList>6000.0 1000.0 6000.0 8000.0</gml:posList>
+      </gml:LineString>
+    </lijngeometrie2D>
+  </LSkabel>
+  <LSmof>
+    <Handle>418A</Handle>
+    <GisId>12348</GisId>
+    <Status>BESTAAND</Status>
+    <Functie>AFTAK</Functie>
+    <Type>Wikkelmof</Type>
+    <Fabrikant>Filoform</Fabrikant>
+    <puntgeometrie2D>
+      <gml:Point>
+        <gml:pos>6000.0 1000.0</gml:pos>
+      </gml:Point>
+    </puntgeometrie2D>
+  </LSmof>
+</nnnuf:NetbeheerInfoUitwisseling>
